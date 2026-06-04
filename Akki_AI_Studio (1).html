@@ -17,8 +17,8 @@ body{font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#e8e8e8;min-heig
 .nav-tab:hover{color:#ccc;background:#1a1a1a}
 .nav-tab.active{color:#CECBF6;background:#1e1e2e;border-color:#534AB7}
 .panel{display:none}.panel.active{display:block}
-.main{display:grid;grid-template-columns:290px 1fr;min-height:calc(100vh - 105px)}
-.sidebar{border-right:0.5px solid #2a2a2a;padding:16px;display:flex;flex-direction:column;gap:16px;background:#0c0c0c;overflow-y:auto}
+.main{display:grid;grid-template-columns:270px 1fr;min-height:calc(100vh - 105px)}
+.sidebar{border-right:0.5px solid #2a2a2a;padding:16px;display:flex;flex-direction:column;gap:14px;background:#0c0c0c;overflow-y:auto}
 .sec-title{font-size:10px;color:#555;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
 .style-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .sbtn{padding:8px 6px;border-radius:8px;border:0.5px solid #2a2a2a;background:#161616;color:#bbb;font-size:12px;cursor:pointer;text-align:center;transition:all 0.15s;line-height:1.5}
@@ -33,94 +33,102 @@ body{font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#e8e8e8;min-heig
 .mtag:hover{border-color:#854F0B;color:#EF9F27;background:#1a0f02}
 .mtag.active{border-color:#EF9F27;color:#FAC775;background:#1a0f02}
 .content{display:flex;flex-direction:column;background:#0f0f0f}
-.canvas-area{flex:1;display:flex;align-items:center;justify-content:center;padding:28px;min-height:360px}
-.upload-zone{width:100%;max-width:620px;border:1.5px dashed #2a2a2a;border-radius:16px;padding:48px 28px;text-align:center;cursor:pointer;transition:all 0.2s;background:#111}
+.canvas-area{flex:1;display:flex;align-items:center;justify-content:center;padding:20px;min-height:280px}
+.upload-zone{width:100%;max-width:580px;border:1.5px dashed #2a2a2a;border-radius:14px;padding:40px 24px;text-align:center;cursor:pointer;transition:all 0.2s;background:#111}
 .upload-zone:hover{border-color:#534AB7;background:#1a1a2e}
 .upload-zone.has-image{border-style:solid;border-color:#2a2a2a;padding:0;overflow:hidden}
-.preview-img{width:100%;border-radius:14px;display:block;max-height:360px;object-fit:cover}
-.prompt-area{padding:16px 20px;border-top:0.5px solid #2a2a2a;background:#0c0c0c}
-.pbox{display:flex;gap:8px;align-items:flex-end}
-.pinput{flex:1;background:#161616;border:0.5px solid #2a2a2a;border-radius:10px;padding:10px 14px;color:#e8e8e8;font-size:13px;resize:none;min-height:48px;max-height:100px;outline:none;font-family:'Segoe UI',sans-serif;transition:border-color 0.15s;line-height:1.5}
+.preview-img{width:100%;border-radius:12px;display:block;max-height:280px;object-fit:cover}
+.prompt-area{padding:14px 18px;border-top:0.5px solid #2a2a2a;background:#0c0c0c}
+.pbox{display:flex;gap:8px;align-items:flex-end;margin-bottom:10px}
+.pinput{flex:1;background:#161616;border:0.5px solid #2a2a2a;border-radius:10px;padding:10px 14px;color:#e8e8e8;font-size:13px;resize:none;min-height:48px;max-height:120px;outline:none;font-family:'Segoe UI',sans-serif;transition:border-color 0.15s;line-height:1.5}
 .pinput:focus{border-color:#534AB7}
 .pinput::placeholder{color:#555}
-.btn-gen{padding:10px 18px;border-radius:10px;background:#534AB7;border:none;color:#fff;font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:6px;white-space:nowrap}
-.btn-gen:hover{background:#7F77DD}
+.btn-row{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
 .btn-ai{padding:8px 14px;border-radius:8px;background:#1a0f02;border:0.5px solid #854F0B;color:#EF9F27;font-size:12px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:5px}
 .btn-ai:hover{background:#2a1804;border-color:#EF9F27}
-.btn-row{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
-.out-box{margin-top:12px;background:#161616;border:0.5px solid #2a2a2a;border-radius:10px;padding:14px;font-size:13px;color:#ccc;line-height:1.8;display:none;white-space:pre-wrap}
+.btn-copy{padding:9px 16px;border-radius:9px;background:#1e1e2e;border:0.5px solid #534AB7;color:#CECBF6;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:5px}
+.btn-copy:hover{background:#2a2a42}
+.btn-enhance{width:100%;padding:13px;border-radius:11px;background:linear-gradient(135deg,#534AB7,#1D9E75);border:none;color:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;letter-spacing:0.3px}
+.btn-enhance:hover{opacity:0.9;transform:translateY(-1px)}
+.btn-enhance:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.out-box{background:#161616;border:0.5px solid #2a2a2a;border-radius:10px;padding:14px;font-size:13px;color:#ccc;line-height:1.8;display:none;white-space:pre-wrap;margin-bottom:10px}
 .out-box.vis{display:block}
 .spinner{display:inline-block;width:14px;height:14px;border:2px solid #ffffff33;border-top-color:#fff;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-right:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.copy-btn{float:right;font-size:11px;color:#888;cursor:pointer;padding:3px 8px;border-radius:5px;background:#222;border:0.5px solid #333;margin-left:8px}
-.copy-btn:hover{color:#ddd;background:#2a2a2a}
+.copy-btn-sm{float:right;font-size:11px;color:#888;cursor:pointer;padding:3px 8px;border-radius:5px;background:#222;border:0.5px solid #333}
+.copy-btn-sm:hover{color:#ddd}
 input[type=file]{display:none}
-.upscale-wrap{padding:20px;display:flex;flex-direction:column;gap:16px;max-width:900px}
-.up-card{background:#161616;border:0.5px solid #2a2a2a;border-radius:14px;padding:18px}
-.up-title{font-size:14px;font-weight:500;color:#e8e8e8;margin-bottom:14px;display:flex;align-items:center;gap:7px}
-.up-row{display:flex;align-items:center;margin-bottom:10px;gap:10px}
-.up-label{font-size:12px;color:#888;min-width:160px}
-.up-val{font-size:12px;color:#CECBF6;font-weight:500;min-width:36px;text-align:right}
-.slider-wrap{flex:1}
-input[type=range]{width:100%;accent-color:#7F77DD;cursor:pointer}
-.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:14px}
-.scale-btn{padding:10px 4px;border-radius:9px;border:0.5px solid #2a2a2a;background:#111;color:#bbb;font-size:13px;cursor:pointer;text-align:center;transition:all 0.15s;font-weight:500}
-.scale-btn:hover{border-color:#534AB7;color:#AFA9EC;background:#1a1a2e}
-.scale-btn.active{border-color:#7F77DD;background:#1e1e2e;color:#CECBF6}
-.engine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:14px}
-.engine-btn{padding:10px 6px;border-radius:9px;border:0.5px solid #2a2a2a;background:#111;color:#bbb;font-size:12px;cursor:pointer;text-align:center;transition:all 0.15s;display:flex;flex-direction:column;align-items:center;gap:5px}
-.engine-btn i{font-size:20px}
-.engine-btn:hover{border-color:#0F6E56;color:#5DCAA5;background:#051a13}
-.engine-btn.active{border-color:#1D9E75;background:#051a13;color:#9FE1CB}
-.compare-zone{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
-.img-slot{border:0.5px solid #2a2a2a;border-radius:12px;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#111;cursor:pointer;transition:all 0.2s;overflow:hidden}
-.img-slot:hover{border-color:#534AB7}
-.img-slot img{width:100%;height:180px;object-fit:cover;border-radius:11px}
-.ntag{padding:5px 11px;border-radius:20px;border:0.5px solid #2a2a2a;background:#161616;color:#999;font-size:12px;cursor:pointer;transition:all 0.15s;user-select:none}
-.ntag:hover{border-color:#534AB7;color:#AFA9EC;background:#1e1e2e}
-.ntag.active{border-color:#7F77DD;color:#CECBF6;background:#1e1e2e}
-.progress-bar{width:100%;height:5px;background:#222;border-radius:3px;overflow:hidden;margin-top:12px;display:none}
-.progress-fill{height:100%;background:linear-gradient(90deg,#534AB7,#1D9E75);width:0%;transition:width 0.4s;border-radius:3px}
-.progress-bar.vis{display:block}
-.btn-upscale{width:100%;padding:14px;border-radius:12px;background:#1D9E75;border:none;color:#fff;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px}
-.btn-upscale:hover{background:#5DCAA5;color:#04342C}
-.btn-upscale:disabled{opacity:0.5;cursor:not-allowed}
-.api-section{background:#0c0c0c;border:0.5px solid #2a2a2a;border-radius:12px;padding:14px}
-.api-row{display:flex;gap:8px;align-items:center}
-.api-input{flex:1;background:#161616;border:0.5px solid #2a2a2a;border-radius:9px;padding:10px 14px;color:#e8e8e8;font-size:13px;outline:none;font-family:monospace;transition:border-color 0.15s}
+.result-section{margin-top:12px;display:none}
+.result-section.vis{display:block}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.result-card{border-radius:12px;overflow:hidden;border:0.5px solid #2a2a2a;background:#111}
+.result-card img{width:100%;display:block;max-height:260px;object-fit:cover}
+.result-label{font-size:11px;color:#555;text-align:center;padding:6px}
+.progress-wrap{margin:10px 0}
+.progress-bar{width:100%;height:5px;background:#222;border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#534AB7,#1D9E75);width:0%;transition:width 0.5s;border-radius:3px}
+.progress-text{font-size:11px;color:#666;margin-top:5px;text-align:center}
+.download-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:9px;background:#1e1e2e;border:0.5px solid #534AB7;color:#AFA9EC;font-size:13px;cursor:pointer;text-decoration:none;margin-top:8px}
+.download-btn:hover{background:#2a2a42;color:#CECBF6}
+.api-bar{background:#0c0c0c;border-bottom:0.5px solid #2a2a2a;padding:10px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.api-input{background:#161616;border:0.5px solid #2a2a2a;border-radius:8px;padding:7px 12px;color:#e8e8e8;font-size:12px;outline:none;font-family:monospace;width:280px}
 .api-input:focus{border-color:#534AB7}
 .api-input::placeholder{color:#444}
-.btn-save-api{padding:10px 16px;border-radius:9px;background:#534AB7;border:none;color:#fff;font-size:13px;cursor:pointer;white-space:nowrap;font-weight:500}
-.btn-save-api:hover{background:#7F77DD}
-.api-status{font-size:12px;margin-top:8px;display:flex;align-items:center;gap:6px}
-.status-dot{width:8px;height:8px;border-radius:50%;background:#444;flex-shrink:0}
-.status-dot.connected{background:#1D9E75}
-.status-dot.error{background:#E24B4A}
-.result-img{width:100%;border-radius:12px;margin-top:14px;display:none;border:0.5px solid #2a2a2a}
-.result-img.vis{display:block}
-.info-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.chip{padding:4px 12px;border-radius:20px;background:#111;border:0.5px solid #2a2a2a;font-size:12px;color:#666;display:flex;align-items:center;gap:5px}
-.download-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:9px;background:#1e1e2e;border:0.5px solid #534AB7;color:#AFA9EC;font-size:13px;cursor:pointer;margin-top:12px;text-decoration:none}
-.download-btn:hover{background:#2a2a42;color:#CECBF6}
-.hf-note{font-size:11px;color:#555;margin-top:6px;line-height:1.6}
+.btn-save{padding:7px 14px;border-radius:8px;background:#534AB7;border:none;color:#fff;font-size:12px;cursor:pointer}
+.btn-save:hover{background:#7F77DD}
+.api-dot{width:8px;height:8px;border-radius:50%;background:#444;flex-shrink:0}
+.api-dot.ok{background:#1D9E75}
+.api-dot.err{background:#E24B4A}
+.api-stat{font-size:11px;color:#555}
+.upscale-wrap{padding:20px;max-width:860px}
+.up-card{background:#161616;border:0.5px solid #2a2a2a;border-radius:14px;padding:18px;margin-bottom:16px}
+.up-title{font-size:14px;font-weight:500;color:#e8e8e8;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:14px}
+.scale-btn{padding:10px;border-radius:9px;border:0.5px solid #2a2a2a;background:#111;color:#bbb;font-size:13px;cursor:pointer;text-align:center;transition:all 0.15s;font-weight:500}
+.scale-btn:hover{border-color:#534AB7;color:#AFA9EC}
+.scale-btn.active{border-color:#7F77DD;background:#1e1e2e;color:#CECBF6}
+.up-row{display:flex;align-items:center;margin-bottom:10px;gap:10px}
+.up-label{font-size:12px;color:#888;min-width:150px}
+.up-val{font-size:12px;color:#CECBF6;font-weight:500;min-width:32px;text-align:right}
+.slider-wrap{flex:1}
+input[type=range]{width:100%;accent-color:#7F77DD;cursor:pointer}
+.compare-zone{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+.img-slot{border:0.5px solid #2a2a2a;border-radius:12px;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#111;cursor:pointer;overflow:hidden}
+.img-slot:hover{border-color:#534AB7}
+.img-slot img{width:100%;height:170px;object-fit:cover;border-radius:11px}
+.btn-upscale{width:100%;padding:13px;border-radius:11px;background:#1D9E75;border:none;color:#fff;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
+.btn-upscale:hover{background:#5DCAA5;color:#04342C}
+.btn-upscale:disabled{opacity:0.5;cursor:not-allowed}
+.prog2{width:100%;height:5px;background:#222;border-radius:3px;overflow:hidden;margin:10px 0;display:none}
+.prog2-fill{height:100%;background:#1D9E75;width:0%;transition:width 0.4s;border-radius:3px}
+.prog2.vis{display:block}
+.ntag{padding:5px 10px;border-radius:20px;border:0.5px solid #2a2a2a;background:#161616;color:#999;font-size:12px;cursor:pointer;transition:all 0.15s}
+.ntag:hover{border-color:#534AB7;color:#AFA9EC}
+.ntag.active{border-color:#7F77DD;color:#CECBF6;background:#1e1e2e}
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <div class="logo">
-    <span class="logo-icon">AK</span>
-    Akki AI Studio
-  </div>
+  <div class="logo"><span class="logo-icon">AK</span>Akki AI Studio</div>
   <span class="badge">Architecture & Landscape Studio</span>
 </div>
 
-<div class="nav-tabs">
-  <div class="nav-tab active" onclick="switchTab('prompt',this)"><i class="ti ti-wand"></i> Prompt Studio</div>
-  <div class="nav-tab" onclick="switchTab('upscale',this)"><i class="ti ti-arrow-autofit-up"></i> Upscale & Enhance</div>
+<!-- API KEY BAR -->
+<div class="api-bar">
+  <i class="ti ti-lock" style="color:#666;font-size:14px"></i>
+  <input class="api-input" type="password" id="apiKeyInput" placeholder="hf_xxxx... Hugging Face token yahan paste karo">
+  <button class="btn-save" onclick="saveKey()">Save</button>
+  <span class="api-dot" id="apiDot"></span>
+  <span class="api-stat" id="apiStat">Token enter karein — huggingface.co/settings/tokens</span>
 </div>
 
-<!-- PROMPT STUDIO TAB -->
+<div class="nav-tabs">
+  <div class="nav-tab active" onclick="switchTab('prompt',this)"><i class="ti ti-wand"></i> Prompt & Enhance Studio</div>
+  <div class="nav-tab" onclick="switchTab('upscale',this)"><i class="ti ti-arrow-autofit-up"></i> Upscale</div>
+</div>
+
+<!-- PROMPT + ENHANCE TAB -->
 <div id="tab-prompt" class="panel active">
   <div class="main">
     <div class="sidebar">
@@ -169,26 +177,54 @@ input[type=range]{width:100%;accent-color:#7F77DD;cursor:pointer}
         </div>
       </div>
     </div>
+
     <div class="content">
       <div class="canvas-area">
         <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fi1').click()">
-          <div style="font-size:38px;color:#444;margin-bottom:12px"><i class="ti ti-photo-up"></i></div>
-          <div style="font-size:14px;color:#888;margin-bottom:6px">Upload your render</div>
-          <div style="font-size:12px;color:#555">Click to upload — JPG, PNG, WEBP</div>
+          <div style="font-size:36px;color:#444;margin-bottom:10px"><i class="ti ti-photo-up"></i></div>
+          <div style="font-size:14px;color:#888;margin-bottom:5px">Apna render upload karo</div>
+          <div style="font-size:12px;color:#555">Click karein — JPG, PNG, WEBP</div>
         </div>
-        <input type="file" id="fi1" accept="image/*" onchange="handleUp(event,'uploadZone')">
+        <input type="file" id="fi1" accept="image/*" onchange="handleUpload(event)">
       </div>
+
       <div class="prompt-area">
         <div class="btn-row">
           <button class="btn-ai" onclick="genPrompt()"><i class="ti ti-wand"></i> AI Prompt Generate</button>
           <button class="btn-ai" onclick="landIdeas()"><i class="ti ti-bulb"></i> Landscape Ideas</button>
           <button class="btn-ai" onclick="enhTips()"><i class="ti ti-sparkles"></i> Enhance Tips</button>
         </div>
-        <div class="pbox">
-          <textarea class="pinput" id="promptInput" placeholder="Describe your architectural vision or paste prompt here..."></textarea>
-          <button class="btn-gen" onclick="copyPrompt()"><i class="ti ti-copy"></i> Copy</button>
-        </div>
+
         <div class="out-box" id="outBox"><span id="outText"></span></div>
+
+        <div class="pbox">
+          <textarea class="pinput" id="promptInput" placeholder="Prompt yahan dikhega ya khud likho... phir Generate Image dabao"></textarea>
+          <button class="btn-copy" onclick="copyPrompt()"><i class="ti ti-copy"></i> Copy</button>
+        </div>
+
+        <button class="btn-enhance" id="enhanceBtn" onclick="generateImage()">
+          <i class="ti ti-photo-ai"></i> Generate Enhanced Image
+        </button>
+
+        <div class="result-section" id="resultSection">
+          <div class="progress-wrap" id="progWrap" style="display:none">
+            <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
+            <div class="progress-text" id="progText">AI image generate ho rahi hai... 30-60 sec</div>
+          </div>
+          <div class="result-grid" id="resultGrid" style="display:none">
+            <div class="result-card">
+              <img id="originalImg" alt="Original">
+              <div class="result-label">Original Render</div>
+            </div>
+            <div class="result-card">
+              <img id="generatedImg" alt="Generated">
+              <div class="result-label">AI Enhanced</div>
+            </div>
+          </div>
+          <a id="dlBtn" class="download-btn" download="akki_generated.png" style="display:none">
+            <i class="ti ti-download"></i> Download Generated Image
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -197,23 +233,6 @@ input[type=range]{width:100%;accent-color:#7F77DD;cursor:pointer}
 <!-- UPSCALE TAB -->
 <div id="tab-upscale" class="panel">
   <div class="upscale-wrap">
-
-    <div class="api-section">
-      <div style="font-size:12px;color:#888;margin-bottom:10px;display:flex;align-items:center;gap:6px">
-        <i class="ti ti-lock" style="font-size:14px"></i>
-        Hugging Face API Token — sirf aapke browser mein rehta hai
-      </div>
-      <div class="api-row">
-        <input class="api-input" type="password" id="apiKeyInput" placeholder="hf_xxxx... apna Hugging Face token yahan paste karo">
-        <button class="btn-save-api" onclick="saveApiKey()"><i class="ti ti-check"></i> Save</button>
-      </div>
-      <div class="api-status" id="apiStatus">
-        <span class="status-dot" id="statusDot"></span>
-        <span id="statusText" style="color:#555">Token enter karein</span>
-      </div>
-      <div class="hf-note">Token nahi hai? <a href="https://huggingface.co/settings/tokens" target="_blank" style="color:#AFA9EC">huggingface.co/settings/tokens</a> par banao — bilkul free!</div>
-    </div>
-
     <div class="up-card">
       <div class="up-title"><i class="ti ti-arrow-autofit-up"></i> Upscale Settings</div>
       <div class="sec-title" style="margin-bottom:10px">Scale Factor</div>
@@ -223,25 +242,10 @@ input[type=range]{width:100%;accent-color:#7F77DD;cursor:pointer}
         <div class="scale-btn" onclick="selScale(this,'6')">6x</div>
         <div class="scale-btn" onclick="selScale(this,'8')">8x</div>
       </div>
-      <div class="sec-title" style="margin-bottom:10px">AI Engine</div>
-      <div class="engine-grid">
-        <div class="engine-btn active" onclick="selEngine(this,'stabilityai/stable-diffusion-x4-upscaler')"><i class="ti ti-building-arch"></i>Architecture</div>
-        <div class="engine-btn" onclick="selEngine(this,'stabilityai/stable-diffusion-x4-upscaler')"><i class="ti ti-trees"></i>Landscape</div>
-        <div class="engine-btn" onclick="selEngine(this,'stabilityai/stable-diffusion-x4-upscaler')"><i class="ti ti-sofa"></i>Interior</div>
-        <div class="engine-btn" onclick="selEngine(this,'stabilityai/stable-diffusion-x4-upscaler')"><i class="ti ti-home-2"></i>Exterior</div>
-        <div class="engine-btn" onclick="selEngine(this,'stabilityai/stable-diffusion-x4-upscaler')"><i class="ti ti-moon"></i>Night</div>
-        <div class="engine-btn" onclick="selEngine(this,'stabilityai/stable-diffusion-x4-upscaler')"><i class="ti ti-drone"></i>Aerial</div>
-      </div>
-    </div>
-
-    <div class="up-card">
-      <div class="up-title"><i class="ti ti-adjustments-horizontal"></i> Enhancement Controls</div>
-      <div class="up-row"><div class="up-label">Creativity / Hallucination</div><div class="slider-wrap"><input type="range" min="0" max="100" value="35" step="1" oninput="updSlider(this,'cre-val')"></div><div class="up-val" id="cre-val">35</div></div>
-      <div class="up-row"><div class="up-label">HDR Detail</div><div class="slider-wrap"><input type="range" min="0" max="100" value="60" step="1" oninput="updSlider(this,'hdr-val')"></div><div class="up-val" id="hdr-val">60</div></div>
-      <div class="up-row"><div class="up-label">Sharpness</div><div class="slider-wrap"><input type="range" min="0" max="100" value="50" step="1" oninput="updSlider(this,'sharp-val')"></div><div class="up-val" id="sharp-val">50</div></div>
-      <div class="up-row"><div class="up-label">Noise Reduction</div><div class="slider-wrap"><input type="range" min="0" max="100" value="40" step="1" oninput="updSlider(this,'noise-val')"></div><div class="up-val" id="noise-val">40</div></div>
-      <div class="up-row"><div class="up-label">Texture Detail</div><div class="slider-wrap"><input type="range" min="0" max="100" value="70" step="1" oninput="updSlider(this,'tex-val')"></div><div class="up-val" id="tex-val">70</div></div>
-      <div style="margin-top:12px">
+      <div class="up-row"><div class="up-label">Sharpness</div><div class="slider-wrap"><input type="range" min="0" max="100" value="60" oninput="updS(this,'sv1')"></div><div class="up-val" id="sv1">60</div></div>
+      <div class="up-row"><div class="up-label">Noise Reduction</div><div class="slider-wrap"><input type="range" min="0" max="100" value="40" oninput="updS(this,'sv2')"></div><div class="up-val" id="sv2">40</div></div>
+      <div class="up-row"><div class="up-label">Texture Detail</div><div class="slider-wrap"><input type="range" min="0" max="100" value="70" oninput="updS(this,'sv3')"></div><div class="up-val" id="sv3">70</div></div>
+      <div style="margin-top:10px">
         <div class="sec-title" style="margin-bottom:8px">Enhance Focus</div>
         <div class="mood-wrap">
           <span class="ntag active" onclick="this.classList.toggle('active')">Glass & Windows</span>
@@ -250,54 +254,59 @@ input[type=range]{width:100%;accent-color:#7F77DD;cursor:pointer}
           <span class="ntag" onclick="this.classList.toggle('active')">Sky & Clouds</span>
           <span class="ntag" onclick="this.classList.toggle('active')">Water</span>
           <span class="ntag" onclick="this.classList.toggle('active')">Lighting</span>
-          <span class="ntag" onclick="this.classList.toggle('active')">People</span>
         </div>
       </div>
     </div>
-
     <div class="up-card">
-      <div class="up-title"><i class="ti ti-eye"></i> Before / After Compare</div>
+      <div class="up-title"><i class="ti ti-eye"></i> Before / After</div>
       <div class="compare-zone">
         <div>
-          <div class="img-slot" id="beforeSlot" onclick="document.getElementById('fi2').click()">
-            <i class="ti ti-photo" style="font-size:32px;color:#444"></i>
-            <div style="font-size:12px;color:#555;margin-top:8px">Original upload karein</div>
+          <div class="img-slot" id="upSlot" onclick="document.getElementById('fi2').click()">
+            <i class="ti ti-photo" style="font-size:28px;color:#444"></i>
+            <div style="font-size:11px;color:#555;margin-top:6px">Upload karein</div>
           </div>
-          <input type="file" id="fi2" accept="image/*" onchange="handleBefore(event)">
-          <div style="font-size:12px;color:#555;text-align:center;margin-top:6px">Original</div>
+          <input type="file" id="fi2" accept="image/*" onchange="handleUpBefore(event)">
+          <div style="font-size:11px;color:#555;text-align:center;margin-top:5px">Original</div>
         </div>
         <div>
-          <div class="img-slot" id="afterSlot" style="border-color:#1D9E75;border-style:dashed">
-            <i class="ti ti-sparkles" style="font-size:32px;color:#1D9E75"></i>
-            <div style="font-size:12px;color:#1D9E75;margin-top:8px">Enhanced output</div>
+          <div class="img-slot" id="upAfter" style="border-color:#1D9E75;border-style:dashed">
+            <i class="ti ti-sparkles" style="font-size:28px;color:#1D9E75"></i>
+            <div style="font-size:11px;color:#1D9E75;margin-top:6px">Enhanced output</div>
           </div>
-          <div style="font-size:12px;color:#555;text-align:center;margin-top:6px">Enhanced</div>
+          <div style="font-size:11px;color:#555;text-align:center;margin-top:5px">Enhanced</div>
         </div>
       </div>
-      <div class="progress-bar" id="progBar"><div class="progress-fill" id="progFill"></div></div>
-      <div class="info-chips" id="infoChips" style="display:none">
-        <div class="chip"><i class="ti ti-clock" style="font-size:13px"></i><span id="timeChip">–</span></div>
-        <div class="chip"><i class="ti ti-check" style="font-size:13px;color:#1D9E75"></i><span style="color:#5DCAA5" id="statusChip">Processing</span></div>
+      <div class="prog2" id="prog2"><div class="prog2-fill" id="prog2Fill"></div></div>
+      <div id="upDlArea" style="display:none;margin-top:10px">
+        <img id="upResult" style="width:100%;border-radius:10px;border:0.5px solid #2a2a2a" alt="Upscaled">
+        <a id="upDlBtn" class="download-btn" download="akki_upscaled.png"><i class="ti ti-download"></i> Download</a>
       </div>
-      <div id="downloadArea" style="display:none;margin-top:12px">
-        <img id="resultImg" style="width:100%;border-radius:12px;border:0.5px solid #2a2a2a" alt="Enhanced result">
-        <a id="downloadBtn" class="download-btn" download="akki_upscaled.png">
-          <i class="ti ti-download"></i> Download Enhanced Image
-        </a>
-      </div>
-      <button class="btn-upscale" id="upscaleBtn" onclick="runUpscale()">
-        <i class="ti ti-arrow-autofit-up"></i> Upscale karo — Real AI Output
-      </button>
+      <button class="btn-upscale" id="upBtn" onclick="runUpscale()"><i class="ti ti-arrow-autofit-up"></i> Upscale karo</button>
       <div class="out-box" id="upOut" style="margin-top:10px"><span id="upText"></span></div>
     </div>
-
   </div>
 </div>
 
 <script>
-let state={style:'Photorealistic',land:'Tropical Garden',cam:'Eye Level',scale:'4',engine:'stabilityai/stable-diffusion-x4-upscaler'};
-let apiKey='';
-let uploadedImageBlob=null;
+let state={style:'Photorealistic',land:'Tropical Garden',cam:'Eye Level',scale:'4'};
+let hfToken='';
+let uploadedFile=null;
+let uploadedB64='';
+let upscaleFile=null;
+
+function saveKey(){
+  const v=document.getElementById('apiKeyInput').value.trim();
+  if(!v||!v.startsWith('hf_')){
+    document.getElementById('apiDot').className='api-dot err';
+    document.getElementById('apiStat').textContent='Invalid — hf_ se shuru hona chahiye';
+    document.getElementById('apiStat').style.color='#E24B4A';
+    return;
+  }
+  hfToken=v;
+  document.getElementById('apiDot').className='api-dot ok';
+  document.getElementById('apiStat').textContent='Token connected!';
+  document.getElementById('apiStat').style.color='#5DCAA5';
+}
 
 function switchTab(tab,el){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
@@ -314,161 +323,212 @@ function selCam(el){
   el.classList.add('active');state.cam=el.textContent;
 }
 function selScale(el,v){document.querySelectorAll('.scale-btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');state.scale=v;}
-function selEngine(el,v){document.querySelectorAll('.engine-btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');state.engine=v;}
-function updSlider(el,id){document.getElementById(id).textContent=el.value;}
+function updS(el,id){document.getElementById(id).textContent=el.value;}
 
-function saveApiKey(){
-  const val=document.getElementById('apiKeyInput').value.trim();
-  if(!val||!val.startsWith('hf_')){
-    document.getElementById('statusDot').className='status-dot error';
-    document.getElementById('statusText').textContent='Invalid token — hf_ se shuru hona chahiye';
-    document.getElementById('statusText').style.color='#E24B4A';
-    return;
-  }
-  apiKey=val;
-  document.getElementById('statusDot').className='status-dot connected';
-  document.getElementById('statusText').textContent='Token connected — ready to upscale!';
-  document.getElementById('statusText').style.color='#5DCAA5';
-}
-
-function handleUp(e,slotId){
+function handleUpload(e){
   const file=e.target.files[0];if(!file)return;
+  uploadedFile=file;
   const r=new FileReader();
   r.onload=ev=>{
-    const slot=document.getElementById(slotId);
-    slot.classList.add('has-image');
-    slot.innerHTML=`<img src="${ev.target.result}" class="preview-img" alt="Uploaded">`;
+    uploadedB64=ev.target.result;
+    const zone=document.getElementById('uploadZone');
+    zone.classList.add('has-image');
+    zone.innerHTML=`<img src="${ev.target.result}" class="preview-img" alt="Uploaded">`;
+    document.getElementById('originalImg').src=ev.target.result;
   };
   r.readAsDataURL(file);
 }
 
-function handleBefore(e){
+function handleUpBefore(e){
   const file=e.target.files[0];if(!file)return;
-  uploadedImageBlob=file;
+  upscaleFile=file;
   const r=new FileReader();
   r.onload=ev=>{
-    document.getElementById('beforeSlot').innerHTML=`<img src="${ev.target.result}" alt="Original">`;
+    document.getElementById('upSlot').innerHTML=`<img src="${ev.target.result}" alt="Original">`;
   };
   r.readAsDataURL(file);
 }
 
-async function runUpscale(){
-  if(!apiKey){alert('Pehle Hugging Face token save karein!');return;}
-  if(!uploadedImageBlob){alert('Pehle original image upload karein!');return;}
+async function callClaude(prompt){
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,messages:[{role:'user',content:prompt}]})
+  });
+  const data=await res.json();
+  return data.content.map(i=>i.text||'').join('');
+}
 
-  const btn=document.getElementById('upscaleBtn');
-  const prog=document.getElementById('progBar');
-  const fill=document.getElementById('progFill');
-  const chips=document.getElementById('infoChips');
-  const dlArea=document.getElementById('downloadArea');
+async function genPrompt(){
+  const box=document.getElementById('outBox'),txt=document.getElementById('outText');
+  box.classList.add('vis');
+  txt.innerHTML='<span class="spinner"></span> AI prompt bana raha hai...';
+  const moods=Array.from(document.querySelectorAll('#tab-prompt .mood-wrap .mtag.active')).map(e=>e.textContent).join(', ');
+  const extra=document.getElementById('promptInput').value;
+  try{
+    const text=await callClaude(`You are an expert architecture visualization prompt engineer for Stable Diffusion.\n\nGenerate a highly detailed image enhancement prompt for:\n- Render Style: ${state.style}\n- Landscape: ${state.land}\n- Mood/Lighting: ${moods||'natural lighting'}\n- Camera: ${state.cam}\n${extra?'- Notes: '+extra:''}\n\nReturn ONLY the prompt. Make it vivid and specific. Start with the architectural style, include materials, lighting, atmosphere, and quality tags like "hyperrealistic, 8K, architectural visualization, professional render".`);
+    txt.innerHTML=`<button class="copy-btn-sm" onclick="navigator.clipboard.writeText(document.getElementById('promptInput').value)"><i class='ti ti-copy'></i> Copy</button>${text}`;
+    document.getElementById('promptInput').value=text;
+  }catch(e){txt.textContent='Error: AI se connect nahi ho saka.';}
+}
+
+async function landIdeas(){
+  const box=document.getElementById('outBox'),txt=document.getElementById('outText');
+  box.classList.add('vis');txt.innerHTML='<span class="spinner"></span> Ideas generate ho rahi hain...';
+  try{
+    const text=await callClaude(`You are a landscape architect. Give 5 creative landscape ideas for ${state.land} setting, ${state.style} style. Each: concept name, key elements, one SD prompt tip.`);
+    txt.innerHTML=`<button class="copy-btn-sm" onclick="navigator.clipboard.writeText('${text.replace(/'/g,"\\'")}')"><i class='ti ti-copy'></i> Copy</button>${text}`;
+  }catch(e){txt.textContent='Error.';}
+}
+
+async function enhTips(){
+  const box=document.getElementById('outBox'),txt=document.getElementById('outText');
+  box.classList.add('vis');txt.innerHTML='<span class="spinner"></span> Tips generate ho rahi hain...';
+  try{
+    const text=await callClaude(`Give 5 specific tips to enhance a ${state.style} architectural render with ${state.land} landscape using AI tools. Include Stable Diffusion, Magnific AI, Real-ESRGAN settings.`);
+    txt.innerHTML=`<button class="copy-btn-sm" onclick="navigator.clipboard.writeText('${text.replace(/'/g,"\\'")}')"><i class='ti ti-copy'></i> Copy</button>${text}`;
+  }catch(e){txt.textContent='Error.';}
+}
+
+function copyPrompt(){
+  const v=document.getElementById('promptInput').value;
+  if(v)navigator.clipboard.writeText(v).then(()=>{
+    const b=document.querySelector('.btn-copy');
+    b.innerHTML='<i class="ti ti-check"></i> Copied!';
+    setTimeout(()=>b.innerHTML='<i class="ti ti-copy"></i> Copy',1500);
+  });
+}
+
+async function generateImage(){
+  if(!hfToken){alert('Pehle Hugging Face token save karein!');return;}
+  const prompt=document.getElementById('promptInput').value.trim();
+  if(!prompt){alert('Pehle AI Prompt Generate karo!');return;}
+
+  const btn=document.getElementById('enhanceBtn');
+  const rs=document.getElementById('resultSection');
+  const pw=document.getElementById('progWrap');
+  const pf=document.getElementById('progFill');
+  const pt=document.getElementById('progText');
+  const rg=document.getElementById('resultGrid');
+  const dl=document.getElementById('dlBtn');
 
   btn.disabled=true;
-  btn.innerHTML='<span class="spinner"></span> Processing... 30-60 sec wait karein';
-  prog.classList.add('vis');fill.style.width='0%';
-  chips.style.display='flex';
-  document.getElementById('statusChip').textContent='Processing...';
-  document.getElementById('statusChip').style.color='#5DCAA5';
-  dlArea.style.display='none';
+  btn.innerHTML='<span class="spinner"></span> AI Image Generate Ho Rahi Hai...';
+  rs.classList.add('vis');
+  pw.style.display='block';
+  rg.style.display='none';
+  dl.style.display='none';
+  pf.style.width='0%';
 
-  let p=0;
-  const iv=setInterval(()=>{p+=1.5;fill.style.width=Math.min(p,88)+'%';if(p>=88)clearInterval(iv);},600);
-  const start=Date.now();
+  const steps=[
+    [10,'Model load ho raha hai...'],
+    [30,'Prompt process ho raha hai...'],
+    [55,'Image generate ho rahi hai...'],
+    [80,'Final touches...'],
+  ];
+  let si=0;
+  const iv=setInterval(()=>{
+    if(si<steps.length){pf.style.width=steps[si][0]+'%';pt.textContent=steps[si][1];si++;}
+  },4000);
 
   try{
-    // Use Hugging Face Inference API with Real-ESRGAN model
-    const response = await fetch(
-      'https://api-inference.huggingface.co/models/ai-forever/Real-ESRGAN',
+    const enhancedPrompt = prompt + ', hyperrealistic architectural visualization, 8K ultra detail, professional render, award winning architecture photography, golden hour lighting, sharp details';
+    
+    const response=await fetch(
+      'https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0',
       {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': uploadedImageBlob.type || 'image/png'
-        },
-        body: uploadedImageBlob
+        method:'POST',
+        headers:{'Authorization':`Bearer ${hfToken}`,'Content-Type':'application/json'},
+        body:JSON.stringify({
+          inputs: enhancedPrompt,
+          parameters:{
+            num_inference_steps:30,
+            guidance_scale:7.5,
+            width:1024,
+            height:1024
+          }
+        })
       }
     );
 
-    if(!response.ok){
-      const errText = await response.text();
-      // If model is loading, retry after 20 seconds
-      if(response.status === 503){
-        document.getElementById('statusChip').textContent='Model load ho raha hai, 20 sec wait...';
-        await new Promise(r=>setTimeout(r,20000));
-        btn.disabled=false;
-        btn.innerHTML='<i class="ti ti-arrow-autofit-up"></i> Dobara try karein';
-        clearInterval(iv);
-        fill.style.width='0%';
-        return;
-      }
-      throw new Error('API Error: ' + response.status + ' — ' + errText);
+    if(response.status===503){
+      clearInterval(iv);
+      pt.textContent='Model warm up ho raha hai — 30 sec baad dobara try karein';
+      pf.style.width='100%';
+      btn.disabled=false;
+      btn.innerHTML='<i class="ti ti-photo-ai"></i> Dobara Try Karo';
+      return;
     }
 
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
+    if(!response.ok){
+      const err=await response.text();
+      throw new Error(err);
+    }
 
-    clearInterval(iv);fill.style.width='100%';
-    const elapsed=((Date.now()-start)/1000).toFixed(1);
-    document.getElementById('timeChip').textContent=elapsed+'s';
-    document.getElementById('statusChip').textContent='Complete!';
+    const blob=await response.blob();
+    const url=URL.createObjectURL(blob);
 
-    // Show after slot
-    document.getElementById('afterSlot').innerHTML=`<img src="${url}" alt="Enhanced">`;
+    clearInterval(iv);
+    pf.style.width='100%';
+    pt.textContent='Image ready hai!';
 
-    // Show download area
-    document.getElementById('resultImg').src=url;
-    document.getElementById('downloadBtn').href=url;
-    dlArea.style.display='block';
-
-    const upOut=document.getElementById('upOut');
-    upOut.classList.add('vis');
-    document.getElementById('upText').textContent=`Image successfully upscaled using Real-ESRGAN AI!\n\nNeeche "Download Enhanced Image" se save karein.`;
+    document.getElementById('generatedImg').src=url;
+    rg.style.display='grid';
+    dl.href=url;
+    dl.style.display='inline-flex';
+    pw.style.display='none';
 
   }catch(err){
     clearInterval(iv);
-    document.getElementById('statusChip').textContent='Error';
-    document.getElementById('statusChip').style.color='#E24B4A';
-    const upOut=document.getElementById('upOut');
-    upOut.classList.add('vis');
-    document.getElementById('upText').textContent='Error: '+err.message+'\n\nToken check karein ya thodi der baad try karein.';
+    pt.textContent='Error: '+err.message;
+    pt.style.color='#E24B4A';
   }
 
   btn.disabled=false;
-  btn.innerHTML='<i class="ti ti-arrow-autofit-up"></i> Upscale karo — Real AI Output';
-  setTimeout(()=>{prog.classList.remove('vis');fill.style.width='0%';},3000);
+  btn.innerHTML='<i class="ti ti-photo-ai"></i> Generate Enhanced Image';
 }
 
-async function callAI(prompt,outId,textId){
-  const box=document.getElementById(outId),txt=document.getElementById(textId);
-  box.classList.add('vis');
-  txt.innerHTML='<span class="spinner"></span> Generating...';
+async function runUpscale(){
+  if(!hfToken){alert('Pehle token save karein!');return;}
+  if(!upscaleFile){alert('Pehle image upload karein!');return;}
+  const btn=document.getElementById('upBtn');
+  const prog=document.getElementById('prog2');
+  const fill=document.getElementById('prog2Fill');
+  btn.disabled=true;
+  btn.innerHTML='<span class="spinner"></span> Upscaling...';
+  prog.classList.add('vis');fill.style.width='0%';
+  document.getElementById('upDlArea').style.display='none';
+  let p=0;const iv=setInterval(()=>{p+=2;fill.style.width=Math.min(p,88)+'%';if(p>=88)clearInterval(iv);},500);
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
+    const res=await fetch('https://api-inference.huggingface.co/models/ai-forever/Real-ESRGAN',{
       method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
+      headers:{'Authorization':`Bearer ${hfToken}`,'Content-Type':upscaleFile.type||'image/png'},
+      body:upscaleFile
     });
-    const data=await res.json();
-    const text=data.content.map(i=>i.text||'').join('');
-    txt.innerHTML=`<button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('${textId}').innerText)"><i class='ti ti-copy'></i> Copy</button>${text}`;
-  }catch(e){
-    txt.textContent='Error: AI se connect nahi ho saka.';
+    if(res.status===503){
+      clearInterval(iv);fill.style.width='0%';
+      const out=document.getElementById('upOut');out.classList.add('vis');
+      document.getElementById('upText').textContent='Model load ho raha hai — 30 sec baad dobara try karein';
+      btn.disabled=false;btn.innerHTML='<i class="ti ti-arrow-autofit-up"></i> Dobara Try Karo';
+      return;
+    }
+    if(!res.ok)throw new Error(await res.text());
+    const blob=await res.blob();
+    const url=URL.createObjectURL(blob);
+    clearInterval(iv);fill.style.width='100%';
+    document.getElementById('upAfter').innerHTML=`<img src="${url}" alt="Enhanced">`;
+    document.getElementById('upResult').src=url;
+    document.getElementById('upDlBtn').href=url;
+    document.getElementById('upDlArea').style.display='block';
+    const out=document.getElementById('upOut');out.classList.add('vis');
+    document.getElementById('upText').textContent='Image successfully upscaled! Download button se save karein.';
+  }catch(err){
+    clearInterval(iv);
+    const out=document.getElementById('upOut');out.classList.add('vis');
+    document.getElementById('upText').textContent='Error: '+err.message;
   }
-}
-
-function genPrompt(){
-  const moods=Array.from(document.querySelectorAll('#tab-prompt .mood-wrap .mtag.active')).map(e=>e.textContent).join(', ');
-  const extra=document.getElementById('promptInput').value;
-  callAI(`You are an expert architecture visualization prompt engineer for Midjourney and Stable Diffusion.\n\nGenerate a highly detailed, professional image prompt for:\n- Render Style: ${state.style}\n- Landscape: ${state.land}\n- Mood/Lighting: ${moods||'natural lighting'}\n- Camera Angle: ${state.cam}\n${extra?'- Additional notes: '+extra:''}\n\nReturn ONLY the prompt text, no explanation. Make it vivid, specific, and optimized for AI image generation.`,'outBox','outText');
-}
-function landIdeas(){
-  callAI(`You are a landscape architect. Give 5 creative landscape ideas for a ${state.land} setting with ${state.style} render style. For each: concept name, key plants/elements, one Midjourney tip.`,'outBox','outText');
-}
-function enhTips(){
-  callAI(`Give 5 specific tips to enhance a ${state.style} architectural render with ${state.land} landscape using AI tools like Real-ESRGAN, Magnific AI, Topaz. Include exact settings and workflow steps.`,'outBox','outText');
-}
-function copyPrompt(){
-  const v=document.getElementById('promptInput').value;
-  if(v){navigator.clipboard.writeText(v).then(()=>{const b=document.querySelector('.btn-gen');b.innerHTML='<i class="ti ti-check"></i> Copied!';setTimeout(()=>b.innerHTML='<i class="ti ti-copy"></i> Copy',1500);});}
+  btn.disabled=false;btn.innerHTML='<i class="ti ti-arrow-autofit-up"></i> Upscale karo';
+  setTimeout(()=>{prog.classList.remove('vis');fill.style.width='0%';},3000);
 }
 </script>
 </body>
